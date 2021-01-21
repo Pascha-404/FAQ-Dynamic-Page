@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Markazi Text', serif;
+    background-color: #E9ECEF;
+}
+
+h1 {
+    text-align: center;
+    margin: 50px 0 30px;
+}
+
+.faq-container {
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.faq {
+    border: 1px solid black;
+    background-color: #fff;
+    margin: 20px 0;
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+}
+
+.faq-title {
+    font-size: 24px;
+}
+
+.faq-text {
+    font-size: 18px;
+    display: none;
+    transition: 300ms ease;
+}
+
+.faq.active .faq-text {
+    display: block;
+}
+
+.faq-toggle {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #6C757D;
+    border: 1px solid black;
+}
+
+.faq-toggle:focus {
+    outline: none;
+}
+
+.faq.active .faq-toggle .fa-chevron-down {
+    display: none;
+}
+
+.faq .faq-toggle .fa-chevron-down {
+    display: block;
+}
+
+.faq .faq-toggle .fa-times {
+    display: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+    display: block;
+}
