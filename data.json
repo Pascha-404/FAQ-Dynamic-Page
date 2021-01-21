@@ -1,21 +1,21 @@
 [{
-    "question": "Why shouldn't we trust atoms?",
-    "answer": "They make up everything."
+    "titel": "Why shouldn't we trust atoms?",
+    "text": "They make up everything."
 
 }, {
-    "question": "What do you call someone with no body and no nose?",
-    "answer": "Nobody knows."
+    "titel": "What do you call someone with no body and no nose?",
+    "text": "Nobody knows."
 
 }, {
-    "question": "What's the object-oriented way to become wealthy?",
-    "answer": "Inheritance."
+    "titel": "What's the object-oriented way to become wealthy?",
+    "text": "Inheritance."
 
 }, {
-    "question": "How many tickles does it take to tickle an octopus?",
-    "answer": "Ten-tickles!"
+    "titel": "How many tickles does it take to tickle an octopus?",
+    "text": "Ten-tickles!"
 
 }, {
-    "question": "What is: 1 + 1?",
-    "answer": "Depends on who are you asking."
+    "titel": "What is: 1 + 1?",
+    "text": "Depends on who are you asking."
 
 }]
