@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const port = 8080;
 const path = require('path');
+const faqData = require('./data.json')
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'))
@@ -13,5 +14,7 @@ app.listen(port, () => {
 })
 
 app.get('/', (req, res) => {
-    res.send('<h1>Sending landingpage</h1>')
+    res.render('index.ejs', {
+        faqData
+    })
 })
