@@ -1,0 +1,15 @@
+<%- include('./partials/header.ejs') %>
+
+<div class="faq-container">
+
+    <h1>Frequently asked questions</h1>
+
+    <% for(let faq of faqData) { %>
+    <h3 class="faq-title"> <%= faq.question %> </h3>
+    <p class="faq-text"> <%= faq.answer %> </p>
+    <% } %>
+
+</div>
+
+
+<%- include('./partials/footer.ejs') %>
