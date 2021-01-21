@@ -1,16 +1,18 @@
 <%- include('./partials/header.ejs') %>
 
+<h1>Frequently asked questions</h1>
+
 <div class="faq-container">
 
-    <h1>Frequently asked questions</h1>
-
     <% for(let faq of faqData) { %>
-    <h3 class="faq-title"> <%= faq.title %> </h3>
-    <p class="faq-text"> <%= faq.text %> </p>
-    <button class="faq-toggle">
-        <i class="fas fa-chevron-down"></i>
-        <i class="fas fa-times"></i>
-    </button>
+    <div class="faq">
+        <h3 class="faq-title"> <%= faq.title %> </h3>
+        <p class="faq-text"> <%= faq.text %> </p>
+        <button class="faq-toggle">
+            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
     <% } %>
 
 </div>
