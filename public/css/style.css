@@ -19,13 +19,40 @@ h1 {
     margin: 30px auto;
 }
 
+.faq::before,
+.faq::after {
+    content: '\f075';
+    font-family: 'Font Awesome 5 Free';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #F34213;
+    font-size: 6rem;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.faq::after {
+    color: #02C39A;
+    top: -10px;
+    left: -30px;
+    transform: rotatey(180deg);
+}
+
+.faq.active {
+    background-color: #fff;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
 .faq {
     border: 1px solid black;
-    background-color: #fff;
+    background-color: transparent;
     margin: 20px 0;
     border-radius: 15px;
     padding: 20px;
     position: relative;
+    transition: 0.3s ease;
+    overflow: hidden;
 }
 
 .faq-title {
@@ -33,9 +60,8 @@ h1 {
 }
 
 .faq-text {
-    font-size: 18px;
+    font-size: 22px;
     display: none;
-    transition: 300ms ease;
 }
 
 .faq.active .faq-text {
