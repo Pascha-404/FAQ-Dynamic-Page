@@ -1,8 +1,10 @@
 <%- include('./partials/header.ejs') %>
 
 <section class="faq-form edit">
+
     <h2>Edit a FAQ</h2>
-    <form action="/" method="POST">
+
+    <form action="/<%=faq.id%>?_method=PATCH" method="POST">
         <div class="input-container">
             <label for="form-title">Question:</label>
             <textarea class="form-title edit" name="title" id="form-title" type="text"
@@ -14,6 +16,7 @@
         </div>
         <button>Submit</button>
     </form>
+
 </section>
 
 <%- include ('./partials/footer.ejs') %>

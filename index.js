@@ -6,6 +6,7 @@ const faqData = require('./data.json');
 const {
     v4: uuid
 } = require('uuid');
+const methodOverride = require('method-override')
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'))
@@ -13,6 +14,7 @@ app.use(express.json())
 app.use(express.urlencoded({
     extended: true
 }))
+app.use(methodOverride('_method'))
 
 app.use(express.static(path.join(__dirname, 'public')))
 
@@ -48,6 +50,18 @@ app.get('/edit/:id', (req, res) => {
         faq
     })
 
+})
+
+app.patch('/:id', (req, res) => {
+    const {
+        id
+    } = req.params;
+    const newText = req.body.text;
+    const newTitle = req.body.title;
+    const findText = faqData.find(d => d.id === id);
+    findText.text = newText;
+    findText.title = newTitle;
+    res.redirect('/');
 })
 
 app.get('/edit', (req, res) => {
