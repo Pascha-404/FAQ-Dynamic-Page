@@ -4,14 +4,14 @@
 
 <section class="faq-form">
     <h2>Add a FAQ</h2>
-    <form action="">
+    <form action="/" method="POST">
         <div class="input-container">
             <label for="form-title">Question:</label>
-            <input class="form-title" id="form-title" type="text" placeholder="Fill in your question">
+            <input class="form-title" name="title" id="form-title" type="text" placeholder="Fill in your question">
         </div>
         <div class="input-container">
             <label for="form-text">Answer:</label>
-            <textarea class="form-text" name="form-text" id="form-text" cols="30" rows="3"
+            <textarea class="form-text" name="text" id="form-text" cols="30" rows="3"
                 placeholder="Fill in the answer"></textarea>
         </div>
         <button>Submit</button>
