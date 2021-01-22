@@ -5,11 +5,12 @@
     <form action="/" method="POST">
         <div class="input-container">
             <label for="form-title">Question:</label>
-            <textarea class="form-title" name="title" id="form-title" type="text">
+            <textarea class="form-title edit" name="title" id="form-title" type="text"
+                rows="1"><%= faq.title %> </textarea>
         </div>
         <div class="input-container">
             <label for="form-text">Answer:</label>
-            <textarea class="form-text" name="text" id="form-text" cols="30" rows="3"></textarea>
+            <textarea class="form-text edit" name="text" id="form-text" cols="30" rows="1"> <%= faq.text %> </textarea>
         </div>
         <button>Submit</button>
     </form>
