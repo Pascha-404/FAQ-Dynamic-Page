@@ -7,6 +7,96 @@
 body {
     font-family: 'Markazi Text', serif;
     background-color: #E9ECEF;
+    position: relative;
+}
+
+.add {
+    position: fixed;
+    font-size: 40px;
+    border: none;
+    border-radius: 50%;
+    top: 10px;
+    right: 10px;
+    color: #6C757D;
+    transition: transform 500ms ease;
+    cursor: pointer;
+}
+
+.add.active {
+    transform: rotate(90deg);
+}
+
+.add:active {
+    transform: scale(0.98);
+}
+
+.add:focus {
+    outline: none;
+}
+
+.faq-form {
+    position: fixed;
+    right: 20px;
+    top: 70px;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: #fff;
+    padding: 20px;
+    z-index: 1;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2), 1px 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    transition: transform 300ms ease-out;
+    transform: translateX(400%);
+}
+
+.faq-form.active {
+    transform: translateX(0);
+}
+
+.faq-form h2 {
+    text-align: center;
+    margin-top: 0;
+    text-decoration: underline;
+    margin-bottom: 30px;
+}
+
+.faq-form .input-container {
+    margin: 20px 0 20px 0;
+    position: relative;
+}
+
+.input-container label {
+    position: absolute;
+    top: -22px;
+    font-size: 20px;
+}
+
+.input-container:nth-child(1) {
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.form-title {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.form-title:focus,
+.form-text:focus {
+    outline: none;
+}
+
+.faq-form button {
+    background-color: #6C757D;
+    width: 100%;
+    color: #fff;
+    padding: 8px 0;
+    border-radius: 6px;
+}
+
+.faq-form button:active {
+    transform: scale(0.98);
 }
 
 h1 {
