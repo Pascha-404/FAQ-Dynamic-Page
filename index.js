@@ -38,3 +38,22 @@ app.post('/', (req, res) => {
     });
     res.redirect('/')
 })
+
+app.get('/edit/:id', (req, res) => {
+    const {
+        id
+    } = req.params;
+    const faq = faqData.find(d => d.id === id);
+    res.render('edit', {
+        faq
+    })
+
+})
+
+app.get('/edit', (req, res) => {
+    res.render('edit')
+})
+
+app.get('*', (req, res) => {
+    res.send(` <h1> PAGE NOT FOUND 404 </h1>`)
+})
