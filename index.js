@@ -3,6 +3,9 @@ const app = express();
 const port = 8080;
 const path = require('path');
 const faqData = require('./data.json');
+const {
+    v4: uuid
+} = require('uuid');
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'))
@@ -29,6 +32,7 @@ app.post('/', (req, res) => {
         text
     } = req.body;
     faqData.unshift({
+        id: uuid(),
         title,
         text
     });
