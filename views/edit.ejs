@@ -4,6 +4,8 @@
 
     <h2>Edit a FAQ</h2>
 
+    <form class="delete" action="/<%=faq.id%>?_method=DELETE" method="POST"><button>Delete</button></form>
+
     <form action="/<%=faq.id%>?_method=PATCH" method="POST">
         <div class="input-container">
             <label for="form-title">Question:</label>

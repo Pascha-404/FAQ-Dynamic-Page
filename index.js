@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const port = 8080;
 const path = require('path');
-const faqData = require('./data.json');
+let faqData = require('./data.json');
 const {
     v4: uuid
 } = require('uuid');
@@ -62,6 +62,15 @@ app.patch('/:id', (req, res) => {
     findText.text = newText;
     findText.title = newTitle;
     res.redirect('/');
+})
+
+app.delete('/:id', (req, res) => {
+    const {
+        id
+    } = req.params;
+    faqData = faqData.filter(d => d.id !== id);
+    res.redirect('/')
+
 })
 
 app.get('/edit', (req, res) => {
