@@ -1,21 +1,39 @@
 <%- include('./partials/header.ejs') %>
 
+<button id="add" class="add"><i class="fas fa-plus-circle"></i></button>
+
+<section class="faq-form">
+    <h2>Add a FAQ</h2>
+    <form action="">
+        <div class="input-container">
+            <label for="form-title">Question:</label>
+            <input class="form-title" id="form-title" type="text" placeholder="Fill in your question">
+        </div>
+        <div class="input-container">
+            <label for="form-text">Answer:</label>
+            <textarea class="form-text" name="form-text" id="form-text" cols="30" rows="3"
+                placeholder="Fill in the answer"></textarea>
+        </div>
+        <button>Submit</button>
+    </form>
+</section>
+
 <h1>Frequently asked questions</h1>
 
-<div class="faq-container">
+<section class="faq-container">
 
     <% for(let faq of faqData) { %>
-    <div class="faq">
+    <section class="faq">
         <h3 class="faq-title"> <%= faq.title %> </h3>
         <p class="faq-text"> <%= faq.text %> </p>
         <button class="faq-toggle">
             <i class="fas fa-chevron-down"></i>
             <i class="fas fa-times"></i>
         </button>
-    </div>
+    </section>
     <% } %>
 
-</div>
+</section>
 
 
 <%- include('./partials/footer.ejs') %>
